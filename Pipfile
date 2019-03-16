@@ -11,6 +11,8 @@ autopep8 = "*"
 [packages]
 django = "*"
 psycopg2-binary = "*"
+slackclient = "*"
+django-background-tasks = "*"
 
 [requires]
 python_version = "3.7"
