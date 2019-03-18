@@ -1,12 +1,35 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Slappy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slappy</title>
 </head>
 <body>
-    <h2 style="text-align: center">Welcome to the slappy app</h2>
+
+    <table  class="container">
+      <thead>
+        <tr>
+          <th><h3>Username</h3></th>
+          <th><h3>Tweet</h3></th>
+          <th><h3>Created</h3></th>
+          <th><h3>language</h3></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {% for tweet in tweets %}
+        <tr>
+            <td>{{tweet.tw_username}}</td>
+            <td>{{tweet.tw_text}}</td>
+            <td>{{tweet.tw_date}}</td>
+            <td>{{tweet.tw_lang}}</td>
+          </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
 </body>
 </html>

@@ -10,6 +10,7 @@
 -   psycopg2-binary
 -   slackclient
 -   celery
+-   rabbitmq-server
 -   python-twitter
 
 ## Installation

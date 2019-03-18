@@ -12,9 +12,9 @@ autopep8 = "*"
 django = "*"
 psycopg2-binary = "*"
 slackclient = "*"
-django-background-tasks = "*"
 celery = "*"
 python-twitter = "*"
+djangorestframework = "*"
 
 [requires]
 python_version = "3.7"

@@ -23,6 +23,5 @@ def go_listener():
                         statuses = api.GetUserTimeline(screen_name=screen_name)
                         if statuses:
                             for status in statuses:
-                                if Tweets.objects.filter(tw_id=status.id):
-                                    continue
-                                Tweets.create_from_fetches(status)
+                                if not Tweets.objects.filter(tw_id=status.id):
+                                    Tweets.create_from_fetches(status)
